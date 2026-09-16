@@ -20,6 +20,8 @@ async def main():
         if chunk.text:
             print(chunk.text, end="", flush=True)
 
+    print("\n")
+
     async for chunk in agent.run(PREGUNTA2, stream=True, session=session):
         if chunk.text:
             print(chunk.text, end="", flush=True)
